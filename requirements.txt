@@ -1,0 +1,21 @@
+# Core dependencies
+langchain>=0.1.0
+langchain-google-genai>=1.0.0
+langchain-core>=0.1.0
+
+# Kubernetes operations
+kubernetes>=28.1.0
+pyyaml>=6.0
+
+# UI/UX enhancements
+rich>=13.0.0
+
+# Additional utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# Development dependencies (optional)
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0
