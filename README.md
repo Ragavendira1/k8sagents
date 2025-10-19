@@ -1,6 +1,23 @@
 # 🚀 Enhanced Kubernetes AI Agent
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/Ragavendira1/k8sagents)
+[![Python](https://img.shields.io/badge/Python-3.8+-green?style=for-the-badge&logo=python)](https://python.org)
+[![LangChain](https://img.shields.io/badge/LangChain-AI%20Framework-orange?style=for-the-badge)](https://langchain.com)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-Container%20Orchestration-blue?style=for-the-badge&logo=kubernetes)](https://kubernetes.io)
+
 A powerful, intelligent Kubernetes management agent powered by LangChain and Google's Gemini AI. This agent provides a user-friendly interface for managing Kubernetes clusters with advanced features, comprehensive error handling, and security guardrails.
+
+## 📋 Table of Contents
+
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+- [Usage Examples](#-usage-examples)
+- [Configuration](#-configuration)
+- [Architecture](#-architecture)
+- [Security](#-security-considerations)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Support](#-support)
 
 ## ✨ Features
 
@@ -46,17 +63,29 @@ A powerful, intelligent Kubernetes management agent powered by LangChain and Goo
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Ragavendira1/k8sagents.git
    cd k8sagents
    ```
 
 2. **Install dependencies**:
    ```bash
+   # Option 1: Using pip
    pip install -r requirements.txt
+   
+   # Option 2: Using the installation script
+   chmod +x install.sh
+   ./install.sh
    ```
 
 3. **Set up environment variables**:
    ```bash
+   # Copy the example configuration
+   cp config.example .env
+   
+   # Edit the .env file with your settings
+   nano .env
+   
+   # Or set environment variables directly
    export GOOGLE_API_KEY="your-google-api-key"
    export K8S_NAMESPACE="default"  # Optional
    export K8S_MAX_REPLICAS="10"    # Optional
@@ -64,7 +93,7 @@ A powerful, intelligent Kubernetes management agent powered by LangChain and Goo
 
 4. **Run the agent**:
    ```bash
-   python k8s.py
+   python3 k8s.py
    ```
 
 ### Command Line Options
@@ -209,11 +238,56 @@ pytest test_k8s_operations.py
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Submit a pull request
+We welcome contributions! Here's how you can help:
+
+1. **Fork the repository**:
+   ```bash
+   # Click the "Fork" button on GitHub or use:
+   gh repo fork https://github.com/Ragavendira1/k8sagents
+   ```
+
+2. **Create a feature branch**:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Make your changes**:
+   - Follow the existing code style
+   - Add tests for new functionality
+   - Update documentation as needed
+
+4. **Test your changes**:
+   ```bash
+   python3 -m pytest
+   python3 k8s.py --help
+   ```
+
+5. **Submit a pull request**:
+   - Push your branch to your fork
+   - Create a pull request on GitHub
+   - Describe your changes clearly
+
+### Development Setup
+
+```bash
+# Clone your fork
+git clone https://github.com/your-username/k8sagents.git
+cd k8sagents
+
+# Install development dependencies
+pip install -r requirements.txt
+pip install pytest black flake8 mypy
+
+# Run tests
+pytest
+
+# Format code
+black k8s.py
+
+# Check code quality
+flake8 k8s.py
+mypy k8s.py
+```
 
 ## 📄 License
 
@@ -223,10 +297,24 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For support and questions:
 
-1. Check the documentation
-2. Review the error logs
-3. Open an issue on GitHub
-4. Contact the development team
+1. **Check the documentation** - Review this README and inline code comments
+2. **Review the error logs** - Enable verbose logging with `python3 k8s.py --verbose`
+3. **Open an issue on GitHub** - [Create an issue](https://github.com/Ragavendira1/k8sagents/issues)
+4. **Check existing issues** - [Browse existing issues](https://github.com/Ragavendira1/k8sagents/issues)
+
+### Repository Information
+
+- **GitHub Repository**: [https://github.com/Ragavendira1/k8sagents](https://github.com/Ragavendira1/k8sagents)
+- **Issues**: [Report bugs or request features](https://github.com/Ragavendira1/k8sagents/issues)
+- **Discussions**: [Community discussions](https://github.com/Ragavendira1/k8sagents/discussions)
+- **Releases**: [Latest releases](https://github.com/Ragavendira1/k8sagents/releases)
+
+### Getting Help
+
+- **Documentation**: This README contains comprehensive usage instructions
+- **Examples**: Check the usage examples section above
+- **Configuration**: Review the configuration section for setup options
+- **Troubleshooting**: Enable verbose logging to debug issues
 
 ## 🚀 Roadmap
 
